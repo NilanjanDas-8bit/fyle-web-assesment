@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="section1" class="section white-bg">
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <h6>AWARD WINNING</h6>
+                    <h1>DIGITAL MARKETING AGENCY</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a href="#" class="button" id="openPopup">Contact Us</a>
+                </div>
+                <div class="image">
+                    <img src="assets/AWARD.jpg" alt="Marketing Image">
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div id="section2" class="section grey-bg">
+        <div class="container">
+            <div class="service-section">
+                <h6>What we do</h6>
+                <h1>Service provided for you</h1>
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="assets/project_1.jpg" alt="Slide 1">
+                        <div class="overlay">
+                            <a href="https://fylehq.com" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/project_2.jpg" alt="Slide 2">
+                        <div class="overlay">
+                            <a href="https://fylehq.com" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/project_3.jpeg" alt="Slide 3">
+                        <div class="overlay">
+                            <a href="https://fylehq.com" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section3" class="section white-bg">
+        <div class="container">
+            <div class="project-header">
+                <h6>OUR PROJECTS</h6>
+                <h2>WHY WE ARE BEST</h2>
+            </div>
+            <div class="image-and-content">
+                <div class="image-box">
+                    <img id="dynamic-image" src="assets/project_2.jpg" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <div class="project" data-image-url="assets/project_1.jpg">
+                        <div class="content-column">
+                            <b>Genderless Kei - Japan's Hot</b>
+                            <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of...</p>
+                        </div>
+                    </div>
+                    <div class="project" data-image-url="assets/project_2.jpg">
+                        <div class="content-column">
+                            <b>Better Strategy & Quality</b>
+                            <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of...</p>
+                        </div>
+                    </div>
+                    <div class="project" data-image-url="assets/project_3.jpeg">
+                        <div class="content-column">
+                            <b>Innovative Solutions</b>
+                            <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="section4" class="section grey-bg">
+        <div class="container">
+            <h6>EXPERT GROWTHS</h6>
+            <h2>OUR COMPANY GROWTH</h2>
+            <div class="stats">
+                <div class="stat">
+                    <i class="fas fa-heart"></i>
+                    <h2>199+</h2>
+                    <p>Staticfied Customers</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <h2>1591+</h2>
+                    <p>Days Of Operation</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-check"></i>
+                    <h2>283+</</h2>
+                    <p>Complete Project</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-trophy"></i> 
+                    <h2>75+</h2>
+                    <p>Win Awards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup/modal -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h2>Talk With Us</h2>
+            <form id="contactForm" action="https://getform.io/f/bxojwoma" method="post" Content-Type: formdata>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="split-input">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="surname">Surname:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
+                </div>
+
+                <button type="submit" class="button red-button">Contact Us</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

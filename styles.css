@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #f0f0f0; /* Set body background color */
+}
+
+.section {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.grey-bg {
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.text {
+    flex: 1; /* Take full width of the container */
+    text-align: left; /* Left-align text */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Ensures space between text and image */
+    align-items: center; /* Vertically center items */
+}
+
+.text {
+    flex: 1; /* Take remaining space */
+    padding-right: 40px; /* Add space between text and image */
+}
+
+.image {
+    flex: 1; /* Take remaining space */
+    text-align: right; /* Align image to the right */
+    padding-left: 20px; /* Add space between image and text */
+}
+
+.image img {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+
+h6 {
+    color: #ff69b4; /* pinkish-red color */
+    font-size: 16px;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #FF0000; /* red color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #cc0000; /* darker red on hover */
+}
+
+.red-button {
+    background-color: #FF0000; /* red color */
+}
+
+.red-button:hover {
+    background-color: #cc0000; /* darker red on hover */
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Contact Form Styles */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.split-input {
+    display: flex;
+    gap: 10px; /* Add gap between the two input fields */
+}
+
+.input-group {
+    flex: 1;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    flex: 1;
+}
+
+/* "What we do" Section Slider */
+.service-section h6 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 200px;
+    height: 400px; /* Adjust this value as needed to make the image vertical rectangle */
+    display: block;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 100%;
+    background: rgba(47, 36, 36, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent overlay from capturing mouse events */
+}
+
+.slide:hover .overlay {
+    opacity: 100;
+}
+
+.read-more {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background: #f10b0b;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dots-container {
+    position: left;
+    bottom: 1px;
+    left: 10px;
+    display: flex;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #030303;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ee1010;
+}
+
+/* OUR PROJECTS Section */
+
+.image-and-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the flex container */
+}
+
+.image-box {
+    width: calc(33.33% - 20px); /* Calculate width to match one-third of the container minus gap */
+    margin-right: 100px; /* Adjusted space between image box and project content */
+    flex-shrink: 0; /* Prevent image box from shrinking */
+}
+
+.image-box img {
+    width: 300px; /* Ensure the image takes full width of its container */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 8px; /* Add space between projects */
+    flex-grow: 1; /* Allow project content to grow */
+}
+
+.project {
+    display: flex;
+    gap: 20px; /* Add space between content columns */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+    flex: 1; /* Equal flex distribution among projects */
+}
+
+.project.clicked .content-column b,
+.project.clicked .content-column p {
+    color: white; /* Change text color to white when project is clicked */
+}
+
+.content-column {
+    flex: 1; /* Take remaining space */
+}
+
+
+
+/* EXPERT GROWTH Section */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.stat {
+    width: calc(25% - 40px); /* Adjusted width for responsiveness */
+    margin: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.stat:hover {
+    transform: translateY(-5px); /* Move box up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat i {
+    font-size: 40px; /* Adjust icon size */
+    color: #f72626; /* Optional: Set icon color to match theme */
+    margin-top: 20px; /* Add space above the icon */
+}
+
+.stat h2 {
+    margin-top: 10px; /* Add space between icon and heading */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-and-content {
+        flex-direction: column; /* Stack image and content vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .image-box {
+        width: 100%; /* Full width for image box on small screens */
+        margin-right: 0; /* No margin between image box and project content */
+        margin-bottom: 20px; /* Space below image box */
+    }
+
+    .project {
+        flex-direction: column; /* Stack project content vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+}
